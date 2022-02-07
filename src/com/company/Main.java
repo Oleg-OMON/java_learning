@@ -9,17 +9,19 @@ public class Main {
         Player player_2 = new Player("Oleg");
         Scanner points = new Scanner(System.in);
         int i;
-        i = points.nextInt();
-        if (i == 1) {
-            player_1.player_points += 15;
-        }
-        if (i == 2) {
-            player_2.player_points += 15;
-        }
-        System.out.println(player_1.player_points);
-        System.out.print(player_2.player_points);
 
+        while (player_1.player_points != 45) {
+            i = points.nextInt();
+            if (i == 1) {
+                player_1.player_points += 15;
+            }
+            if (i == 2) {
+                player_2.player_points += 15;
+            }
+            System.out.println(player_1.player_name + ": " + player_1.player_points);
+            System.out.println(player_2.player_name + ": " + player_2.player_points);
 
+        }
     }
 
 }
